@@ -1,4 +1,7 @@
-flask_appbuilder==4.6.1
+apache-airflow==2.10.5
+Flask_AppBuilder==4.4.1
 pandas==2.2.3
-pyspark==3.5.5
+pyspark==3.5.0
 python-dotenv==1.1.0
+python_dateutil==2.9.0
+python_dateutil==2.9.0.post0
