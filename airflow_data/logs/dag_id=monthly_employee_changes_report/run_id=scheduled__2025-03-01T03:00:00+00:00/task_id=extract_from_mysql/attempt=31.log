@@ -1,0 +1,20 @@
+[2025-04-01T01:53:22.148-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-04-01T01:53:22.154-0300] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monthly_employee_changes_report.extract_from_mysql scheduled__2025-03-01T03:00:00+00:00 [queued]>
+[2025-04-01T01:53:22.156-0300] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monthly_employee_changes_report.extract_from_mysql scheduled__2025-03-01T03:00:00+00:00 [queued]>
+[2025-04-01T01:53:22.157-0300] {taskinstance.py:2303} INFO - Starting attempt 31 of 3
+[2025-04-01T01:53:22.163-0300] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): extract_from_mysql> on 2025-03-01 03:00:00+00:00
+[2025-04-01T01:53:22.166-0300] {standard_task_runner.py:63} INFO - Started process 16618 to run task
+[2025-04-01T01:53:22.170-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'monthly_employee_changes_report', 'extract_from_mysql', 'scheduled__2025-03-01T03:00:00+00:00', '--job-id', '63', '--raw', '--subdir', 'DAGS_FOLDER/monthly_employee_changes_report_dag.py', '--cfg-path', '/var/folders/pw/ybzcyby54d787c124gv_5tjw0000gn/T/tmp7fs0z6t8']
+[2025-04-01T01:53:22.171-0300] {standard_task_runner.py:91} INFO - Job 63: Subtask extract_from_mysql
+[2025-04-01T01:53:22.191-0300] {task_command.py:426} INFO - Running <TaskInstance: monthly_employee_changes_report.extract_from_mysql scheduled__2025-03-01T03:00:00+00:00 [running]> on host ordenador-portatil-de-user-2.local
+[2025-04-01T01:53:22.220-0300] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='admin@example.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='monthly_employee_changes_report' AIRFLOW_CTX_TASK_ID='extract_from_mysql' AIRFLOW_CTX_EXECUTION_DATE='2025-03-01T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='31' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-01T03:00:00+00:00'
+[2025-04-01T01:53:22.221-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2025-04-01T01:53:22.232-0300] {logging_mixin.py:188} WARNING - /Users/user/Documents/repo test eng/env/lib/python3.10/site-packages/airflow/utils/context.py:320 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-04-01T01:57:13.286-0300] {local_task_job_runner.py:288} WARNING - Recorded pid 16678 does not match the current pid 16618
+[2025-04-01T01:57:13.287-0300] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-04-01T01:57:13.291-0300] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 16618. PIDs of all processes in the group: [16618]
+[2025-04-01T01:57:13.291-0300] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 16618
+[2025-04-01T01:58:13.309-0300] {process_utils.py:150} WARNING - process psutil.Process(pid=16618, name='python3.10', status='running', started='01:53:22') did not respond to SIGTERM. Trying SIGKILL
+[2025-04-01T01:58:13.310-0300] {process_utils.py:87} INFO - Sending the signal Signals.SIGKILL to group 16618
+[2025-04-01T01:58:13.318-0300] {process_utils.py:80} INFO - Process psutil.Process(pid=16618, name='python3.10', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='01:53:22') (16618) terminated with exit code Negsignal.SIGKILL
+[2025-04-01T01:58:13.319-0300] {standard_task_runner.py:178} ERROR - Job 64 was killed before it finished (likely due to running out of memory)

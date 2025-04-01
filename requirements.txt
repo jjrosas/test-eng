@@ -1,0 +1,4 @@
+flask_appbuilder==4.6.1
+pandas==2.2.3
+pyspark==3.5.5
+python-dotenv==1.1.0

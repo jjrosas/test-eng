@@ -1,0 +1,1 @@
+[2025-03-31T21:32:35.884-0300] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: employee_changes_report.load_and_clean_data scheduled__2025-03-01T00:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
