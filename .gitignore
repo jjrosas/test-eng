@@ -1,0 +1,26 @@
+# ========================================
+# Archivos grandes específicos
+# ========================================
+airflow_data/airflow.db 
+
+# ========================================
+# Entorno virtual y dependencias
+# ========================================
+env/ 
+
+# ========================================
+# Bibliotecas compiladas y archivos binarios
+# ========================================
+*.so
+*.jar
+*.dylib
+*.pyc
+__pycache__/
+
+# ========================================
+# Archivos de desarrollo/IDE
+# ========================================
+.idea/
+.vscode/
+*.swp
+*.swo
